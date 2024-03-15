@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './App.css'
 
@@ -9,8 +9,12 @@ function App() {
     console.log(text);
   }
 
-// Case 1 for useEffect
-  // jab bhi render hoga useeffect wala hook chalega
+// for useEffect Case 1 => Run on every Render
+  // jab bhi page render hoga useeffect wala hook chalega
+
+  useEffect(()=>{
+    console.log("UI is rendering");
+  })
     
 
 
