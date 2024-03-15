@@ -18,9 +18,21 @@ function App() {
     
 // for case 2=> First time render. This hook runs only on first time when the page is rendered. Here we use dependency array.
 
-  useEffect(()=>{
-    console.log("render only once");
-  },[])
+  // useEffect(()=>{
+  //   console.log("render only once");
+  // },[])
+
+  // case 3=> on every render on particular dependencies whenever change occur in them..
+
+    useEffect(()=>{
+      console.log("text is changed");
+    },[text])
+
+
+
+
+
+
 
   return (
     <div className='App'>
