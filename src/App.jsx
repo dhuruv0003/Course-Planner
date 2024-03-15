@@ -10,7 +10,7 @@ function App() {
   }
 
 // Case 1 for useEffect
-
+  // jab bhi render hoga useeffect wala hook chalega
     
 
 
