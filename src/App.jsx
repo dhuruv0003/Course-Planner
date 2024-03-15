@@ -8,6 +8,13 @@ function App() {
     settext(() => event.target.value);
     console.log(text);
   }
+
+// Case 1 for useEffect
+
+    
+
+
+
   return (
     <div className='App'>
       <input type="text" onChange={changehandler} />
