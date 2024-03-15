@@ -12,12 +12,15 @@ function App() {
 // for useEffect Case 1 => Run on every Render
   // jab bhi page render hoga useeffect wala hook chalega
 
-  useEffect(()=>{
-    console.log("UI is rendering");
-  })
+  // useEffect(()=>{
+  //   console.log("UI is rendering");
+  // })
     
+// for case 2=> First time render. This hook runs only on first time when the page is rendered. Here we use dependency array.
 
-
+  useEffect(()=>{
+    console.log("render only once");
+  },[])
 
   return (
     <div className='App'>
