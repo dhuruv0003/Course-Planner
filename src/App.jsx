@@ -44,7 +44,7 @@ function App() {
   //   }
   // },[text])
 
-  const [courses, setCourses] = useState(null)
+  const [courses, setCourses] = useState(null )
 
   useEffect(() => {
     const FetchData = async () => {
