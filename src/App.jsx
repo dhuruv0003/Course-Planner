@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
+import Cards from "./Components/Cards"
 import Filter from "./Components/Filter";
-
-import {filterData,apiUrl} from "./data"
+import { toast } from "react-toastify";
+import { filterData, apiUrl } from "./data"
 
 import "./App.css"
 function App() {
@@ -43,14 +44,28 @@ function App() {
   //   }
   // },[text])
 
+  const [courses, setCourses] = useState(null)
+
+  useEffect(() => {
+    const FetchData = async () => {
+      try {
+        const res = await fetch(apiUrl);
+        const 
+      } catch (error) {
+
+      }
+    }
+  })
+
 
   return (
     // <div className='App'>
     //   <input type="text" onChange={changehandler} />
     // </div>
     <div className='App'>
-      <Navbar/>
-     <Filter filterData={filterData}/>
+      <Navbar />
+      <Filter filterData={filterData} />
+      <Cards></Cards>
     </div>
   )
 }
