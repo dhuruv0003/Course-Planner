@@ -50,12 +50,17 @@ function App() {
     const FetchData = async () => {
       try {
         const res = await fetch(apiUrl);
-        const 
-      } catch (error) {
+        const output=await res.json();
+        // Now save all the data within the json file into another variable i.e courses.
+        setCourses(output.data)
 
+      } catch (error) {
+        toast.error("something went wrong")
       }
     }
-  })
+    //    call the fetchdata after fetching data
+    FetchData();
+  },[]);
 
 
   return (
@@ -65,7 +70,7 @@ function App() {
     <div className='App'>
       <Navbar />
       <Filter filterData={filterData} />
-      <Cards></Cards>
+      <Cards courses={courses}></Cards>
     </div>
   )
 }
