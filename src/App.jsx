@@ -45,7 +45,7 @@ function App() {
   //   }
   // },[text])
 
-  const [courses, setCourses] = useState(null)
+  const [courses, setCourses] = useState([])
   // To show loading icon while fetching data
   const [loading, setLoading] = useState(true)
 
@@ -85,7 +85,7 @@ function App() {
 
       <div className="">
         {
-          loading ? (<Spinner></Spinner>): (<Cards courses={courses} />)
+          loading ? (<Spinner></Spinner>) : (<Cards courses={courses}></Cards>)
         }
       </div>
 
