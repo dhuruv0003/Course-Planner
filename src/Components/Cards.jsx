@@ -19,7 +19,7 @@ export default function Cards({courses}) {
     return (
         <div className="">
             {getCourses().map((course) => {
-               <Card key={course.id} course={course}></Card>
+                <Card key={course.id} course={course}></Card>
             })}
         </div>
 

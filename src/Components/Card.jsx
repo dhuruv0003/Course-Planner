@@ -14,5 +14,6 @@ export default function Card({ course }) {
                 <p>course.description</p>
             </div>
         </div>
-    </div>)
+    </div>
+    )
 }

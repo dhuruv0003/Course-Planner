@@ -56,7 +56,7 @@ function App() {
       let res = await fetch(apiUrl);
       let output = await res.json();
       // Now save all the data within the json file into another variable i.e courses.
-      setCourses(output)
+      setCourses(output.data)
 
     } catch (error) {
       toast.error("something went wrong")
