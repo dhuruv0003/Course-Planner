@@ -1,11 +1,8 @@
-import { useEffect, useState } from 'react'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-// import Navbar from "./Components/Navbar"
-// import Filter from "./Components/Filter"
-// import Cards from "./Components/Cards"
-// import './App.css'
+import React from "react";
+import Navbar from "./Components/Navbar";
+// import Filter from "./Components/Filter";
 
+import "./App.css"
 function App() {
   // const [text, settext] = useState("")
   // function changehandler(event) {
@@ -51,9 +48,7 @@ function App() {
     // </div>
     <div className='App'>
       <Navbar/>
-      <Filter/>
-      <Cards/>
-      <h1>hello</h1>
+     
     </div>
   )
 }
