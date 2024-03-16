@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-
-import Navbar from "./Components/Navbar"
-import Filter from "./Components/Filter"
-import Cards from "./Components/Cards"
-import './App.css'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+// import Navbar from "./Components/Navbar"
+// import Filter from "./Components/Filter"
+// import Cards from "./Components/Cards"
+// import './App.css'
 
 function App() {
   // const [text, settext] = useState("")
@@ -42,8 +43,6 @@ function App() {
   //     console.log("listener removed");
   //   }
   // },[text])
-
-
 
 
   return (
