@@ -6,11 +6,11 @@ import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
 
 function App() {
-  const [text, settext] = useState("")
-  function changehandler(event) {
-    settext(() => event.target.value);
-    console.log(text);
-  }
+  // const [text, settext] = useState("")
+  // function changehandler(event) {
+  //   settext(() => event.target.value);
+  //   console.log(text);
+  // }
 
   // for useEffect Case 1 => Run on every Render
   // jab bhi page render hoga useeffect wala hook chalega
@@ -33,22 +33,25 @@ function App() {
 
   // case 4 => To handle unmounting of a component (Unmounting is when a React component is removed from the DOM).
 
-  useEffect(() => {
-    //add event listener
-    console.log("listender added");
+  // useEffect(() => {
+  //   //add event listener
+  //   console.log("listender added");
 
-    //Note once the listener is added it first executes the return statement then add another listener.
-    return()=>{
-      console.log("listener removed");
-    }
-  },[text])
+  //   //Note once the listener is added it first executes the return statement then add another listener.
+  //   return()=>{
+  //     console.log("listener removed");
+  //   }
+  // },[text])
 
 
 
 
   return (
+    // <div className='App'>
+    //   <input type="text" onChange={changehandler} />
+    // </div>
     <div className='App'>
-      <input type="text" onChange={changehandler} />
+      
     </div>
   )
 }
