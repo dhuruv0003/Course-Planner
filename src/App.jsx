@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "./Components/Navbar";
-// import Filter from "./Components/Filter";
+import Filter from "./Components/Filter";
+
+import {filterData,apiUrl} from "./data"
 
 import "./App.css"
 function App() {
@@ -48,7 +50,7 @@ function App() {
     // </div>
     <div className='App'>
       <Navbar/>
-     
+     <Filter filterData={filterData}/>
     </div>
   )
 }
