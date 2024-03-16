@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 
 import Navbar from "./Components/Navbar"
-
+import Filter from "./Components/Filter"
+import Cards from "./Components/Cards"
 import './App.css'
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
     // </div>
     <div className='App'>
       <Navbar/>
+      <Filter/>
+      <Cards/>
+      <h1>hello</h1>
     </div>
   )
 }
