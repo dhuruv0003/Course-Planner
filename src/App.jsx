@@ -4,6 +4,7 @@ import Cards from "./Components/Cards"
 import Filter from "./Components/Filter";
 import { toast } from "react-toastify";
 import { filterData, apiUrl } from "./data"
+import Spinner from "./Components/Spinner"
 
 import "./App.css"
 function App() {
@@ -44,23 +45,29 @@ function App() {
   //   }
   // },[text])
 
-  const [courses, setCourses] = useState(null )
+  const [courses, setCourses] = useState(null)
+  // To show loading icon while fetching data
+  const [loading, setLoading] = useState(true)
+
+
+  async function FetchData() {
+    setLoading(true)//loading image dikhao
+    try {
+      let res = await fetch(apiUrl);
+      let output = await res.json();
+      // Now save all the data within the json file into another variable i.e courses.
+      setCourses(output)
+
+    } catch (error) {
+      toast.error("something went wrong")
+    }
+    setLoading(false) //loading image hatao , data aa chuka hai.. 
+  }
 
   useEffect(() => {
-    const FetchData = async () => {
-      try {
-        const res = await fetch(apiUrl);
-        const output=await res.json();
-        // Now save all the data within the json file into another variable i.e courses.
-        setCourses(output.data)
-
-      } catch (error) {
-        toast.error("something went wrong")
-      }
-    }
     //    call the fetchdata after fetching data
     FetchData();
-  },[]);
+  }, []);
 
 
   return (
@@ -68,9 +75,20 @@ function App() {
     //   <input type="text" onChange={changehandler} />
     // </div>
     <div className='App'>
-      <Navbar />
-      <Filter filterData={filterData} />
-      <Cards courses={courses}></Cards>
+      <div className="">
+        <Navbar />
+      </div>
+
+      <div className="">
+        <Filter filterData={filterData} />
+      </div>
+
+      <div className="">
+        {
+          loading ? (<Spinner></Spinner>): (<Cards courses={courses} />)
+        }
+      </div>
+
     </div>
   )
 }

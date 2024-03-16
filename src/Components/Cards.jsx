@@ -9,7 +9,7 @@ export default function Cards(courses) {
     const getCourses = () => {
         Object.values(courses).forEach((courseCategory) => {
             courseCategory.forEach((course) => {
-                allCourses.push(course);
+                allCourses.push(course)
             })
         })
         return allCourses;
