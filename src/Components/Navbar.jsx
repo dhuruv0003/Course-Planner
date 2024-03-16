@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default Navbar = () => {
+export default function Navbar() {
     return (
         <div className="">
             <nav>
