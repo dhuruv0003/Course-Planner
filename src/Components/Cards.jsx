@@ -21,7 +21,7 @@ export default function Cards(props) {
         <div className="">
             {
                 getCourses().map((course) => (
-                    <Card key={courses.id} course={course} />
+                    <Card key={course.id} course={course} />
                 ))
             }
         </div>
