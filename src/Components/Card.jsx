@@ -1,7 +1,7 @@
 import { FcLike } from "react-icons/fc"
 
-export default function Card(props) {
-    let course=props.course;
+export default function Card({course}) {
+  
     return (
         
             <div className="">
