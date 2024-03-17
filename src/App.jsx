@@ -73,7 +73,7 @@ const  App=()=> {
     // <div className='App'>
     //   <input type="text" onChange={changehandler} />
     // </div>
-    <div >
+    <div className="min-h-screen flex flex-col gap-4 bg-red-400">
       <div>
         <Navbar />
       </div>
@@ -83,7 +83,7 @@ const  App=()=> {
       </div>
 
       <div className="">
-        {
+         {
           loading ? (<Spinner></Spinner>) : (<Cards courses={courses}></Cards>)
         }
       </div>
