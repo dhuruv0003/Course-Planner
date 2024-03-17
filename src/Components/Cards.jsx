@@ -18,7 +18,7 @@ export default function Cards({courses}) {
     // getCourses=[ {description : "This course provides an overview of marketing principles and practices, including market research, segmentation, targeting, and positioning. Students will learn how to create effective marketing plans and campaigns, using both traditional and digital marketing techniques.", id : "MK101" image : {url: 'https://codehelp-apis.vercel.app/get-top-courses/Business/Introduction%20To%20Marketing.png', alt: 'Introduction to Marketing'}  title : "Introduction to Marketing"},{},{},{}.......]
 
     return (
-        <div className="">
+        <div className="flex flex-wrap justify-center gap-4 mb-4">
             {
                 getCourses().map((course) => (
                     <Card key={course.id} course={course} />
