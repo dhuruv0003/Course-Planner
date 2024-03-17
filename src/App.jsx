@@ -7,7 +7,7 @@ import { filterData, apiUrl } from "./data"
 import Spinner from "./Components/Spinner"
 
 import "./App.css"
-function App() {
+const  App=()=> {
   // const [text, settext] = useState("")
   // function changehandler(event) {
   //   settext(() => event.target.value);
@@ -45,7 +45,7 @@ function App() {
   //   }
   // },[text])
 
-  const [courses, setCourses] = useState([])
+  const [courses, setCourses] = useState(null)
   // To show loading icon while fetching data
   const [loading, setLoading] = useState(true)
 
@@ -65,7 +65,6 @@ function App() {
   }
 
   useEffect(() => {
-    //    call the fetchdata after fetching data
     FetchData();
   }, []);
 
@@ -74,12 +73,12 @@ function App() {
     // <div className='App'>
     //   <input type="text" onChange={changehandler} />
     // </div>
-    <div className='App'>
-      <div className="">
+    <div >
+      <div>
         <Navbar />
       </div>
 
-      <div className="">
+      <div >
         <Filter filterData={filterData} />
       </div>
 
