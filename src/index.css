@@ -20,3 +20,8 @@
     transform: scale(1.02);
     transition: all 2s;
 }
+
+.card:hover{
+    transform: scale(1.02);
+    transition: all 2s;
+}
