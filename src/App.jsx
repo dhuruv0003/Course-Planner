@@ -48,7 +48,9 @@ const  App=()=> {
   const [courses, setCourses] = useState(null)
   // To show loading icon while fetching data
   const [loading, setLoading] = useState(true)
-
+  // To show filtered data of specific category.
+  // filter me jis bhi button pe click krege uski category title ke through set hojayegi. 
+  const [category,setCategory]=useState(filterData[0].title)
 
   async function FetchData() {
     setLoading(true)//loading image dikhao
@@ -63,7 +65,7 @@ const  App=()=> {
     }
     setLoading(false) //loading image hatao , data aa chuka hai.. 
   }
-
+// Courses=["development","business","design","lifestyle"]
   useEffect(() => {
     FetchData();
   }, []);
@@ -79,12 +81,12 @@ const  App=()=> {
       </div>
 
       <div >
-        <Filter filterData={filterData} />
+        <Filter filterData={filterData} category={category} setCategory={setCategory} />
       </div>
 
       <div className="w-11/12 max-w-[1200px] mx-auto flex flex-wrap justify-center items-center min-h-[50vh]">
          {
-          loading ? (<Spinner></Spinner>) : (<Cards courses={courses}></Cards>)
+          loading ? (<Spinner></Spinner>) : (<Cards courses={courses} category={category}></Cards>)
         }
       </div>
 
