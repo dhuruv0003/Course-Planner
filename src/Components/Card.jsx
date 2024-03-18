@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { FcLike } from "react-icons/fc"
+import { toast } from "react-toastify"
 
 export default function Card({ course , likedCourses, setlikedCourses}) {
     //since we need record of likes of all cards so we will define the likehandler in cards.jsx
@@ -8,7 +9,15 @@ export default function Card({ course , likedCourses, setlikedCourses}) {
     //logic for likehandler
         if(likedCourses.includes(course.id)){
             //i.e course pehle se hi liked ho rakha hai, toh use unlike karne ka logic likhna hai.
-            
+            //aise sabhi course ko filter karlo jinki id liked nahi hai, ya jjinki id is liked course ke barabar nahi hai.
+
+            setlikedCourses((prevlikcourse)=>prevlikcourse.filter((cid)=>(cid!==course.id)))
+            toast.warning("Like removed")
+            // prevlikcourse refers to all liked courses and now after filtering, the current course.id will be removed from prevlikedcourse
+        }
+        else{
+            //Jab course pehle se liked nahi hai.
+            //So insert the course into liked courses.
         }
     }
     return (
