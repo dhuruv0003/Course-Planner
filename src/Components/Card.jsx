@@ -32,7 +32,7 @@ export default function Card({ course, likedCourses, setlikedCourses }) {
     }
     return (
 
-        <div className="w-[300px] bg-blue-950   rounded-md overflow-hidden">
+        <div className="w-[300px] bg-blue-950   rounded-md overflow-hidden card">
             <div className=" relative">
                 <img src={course.image.url} alt="" />
                 <div className="w-[35px] h-[35px] bg-white absolute rounded-full right-2 bottom-[-11px] flex items-center justify-center">
