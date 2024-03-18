@@ -16,4 +16,5 @@
 .card{
     box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.908);
     border-bottom-left-radius: 1.5rem;
+    cursor: pointer;
 }
