@@ -33,7 +33,7 @@ export default function Cards({courses , category}) {
 const [likedCourses,setlikedCourses]=useState([]);
 
     return (
-        <div className="flex flex-wrap justify-center gap-4 mb-4">
+        <div className="flex flex-wrap justify-center gap-7 mb-4">
             {
                 getCourses().map((course) => (
                     <Card key={course.id} course={course} likedCourses={likedCourses} setlikedCourses={setlikedCourses}/>
