@@ -73,7 +73,7 @@ const  App=()=> {
     // <div className='App'>
     //   <input type="text" onChange={changehandler} />
     // </div>
-    <div className="min-h-screen flex flex-col gap-4 bg-red-400">
+    <div className="min-h-screen flex flex-col gap-4 bg-slate-400">
       <div>
         <Navbar />
       </div>

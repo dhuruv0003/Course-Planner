@@ -6,7 +6,7 @@ export default function Cards({courses}) {
     //The data within the api courses is in key value pairs. where object is courses. and kays are (business,design development ,....) theses are coursse category. Now  but we want only values (array of elements of the keys/object
     //get courses is a funtion that retur an array of all the values in api
     
-    const [likedCourses,setlikedCourses]=useState([]);
+    
 
     const allCourses = [];
  
@@ -23,7 +23,7 @@ export default function Cards({courses}) {
 
 //Initiallty all the courses are unliked.
    
-    
+const [likedCourses,setlikedCourses]=useState([]);
 
     return (
         <div className="flex flex-wrap justify-center gap-4 mb-4">
