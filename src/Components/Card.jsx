@@ -18,6 +18,16 @@ export default function Card({ course , likedCourses, setlikedCourses}) {
         else{
             //Jab course pehle se liked nahi hai.
             //So insert the course into liked courses.
+
+            if(likedCourses.length===0){
+                setlikedCourses(course.id);
+            }
+            else{
+                // add previous liked courses along with the current course
+
+                setlikedCourses((prevlikcourse)=>[...prevlikcourse,course.id])
+            }
+            toast.success("Liked successfully")
         }
     }
     return (
