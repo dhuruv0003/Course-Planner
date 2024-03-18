@@ -1,12 +1,15 @@
 import { useState } from "react"
 import { FcLike } from "react-icons/fc"
 
-export default function Card({ course }) {
+export default function Card({ course , likedCourses, setlikedCourses}) {
     //since we need record of likes of all cards so we will define the likehandler in cards.jsx
 
     function likeHandler(){
-        setClick(true)
-
+    //logic for likehandler
+        if(likedCourses.includes(course.id)){
+            //i.e course pehle se hi liked ho rakha hai, toh use unlike karne ka logic likhna hai.
+            
+        }
     }
     return (
 
