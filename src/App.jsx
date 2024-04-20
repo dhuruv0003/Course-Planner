@@ -45,12 +45,12 @@ const  App=()=> {
   //   }
   // },[text])
 
-  const [courses, setCourses] = useState(null)
+  const [courses, setCourses] = useState([]);
   // To show loading icon while fetching data
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   // To show filtered data of specific category.
   // filter me jis bhi button pe click krege uski category title ke through set hojayegi. 
-  const [category,setCategory]=useState(filterData[0].title)
+  const [category,setCategory]=useState(filterData[0].title);
 
   async function FetchData() {
     setLoading(true)//loading image dikhao
