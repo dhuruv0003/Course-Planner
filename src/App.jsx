@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Cards from "./Components/Cards"
 import Filter from "./Components/Filter";
@@ -13,7 +13,6 @@ const  App=()=> {
   //   settext(() => event.target.value);
   //   console.log(text);
   // }
-
   // for useEffect Case 1 => Run on every Render
   // jab bhi page render hoga useeffect wala hook chalega
 
